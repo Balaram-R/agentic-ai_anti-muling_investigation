@@ -1,4 +1,4 @@
-'''<div align="center">
+<div align="center">
 
 # 🏦 AI BANK
 ### Governed Agentic Transaction Risk & AML Investigation Platform
@@ -250,12 +250,3 @@ AI BANK is intended for education, software engineering demonstration, and portf
 ---
 
 <div align="center">
-
-**Built to demonstrate the engineering around AI—not just the model call.**
-
-</div>
-'''
-
-output_path = "/mnt/data/README.md"
-pypandoc.convert_text(readme, "md", format="md", outputfile=output_path, extra_args=["--standalone"])
-print(f"Created: {output_path}")
