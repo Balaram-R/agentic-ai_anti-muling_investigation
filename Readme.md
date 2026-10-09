@@ -1,6 +1,4 @@
-import pypandoc
-
-readme = r'''<div align="center">
+'''<div align="center">
 
 # 🏦 AI BANK
 ### Governed Agentic Transaction Risk & AML Investigation Platform
