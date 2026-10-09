@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ai-bank-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_bank
+      POSTGRES_USER: ai_bank
+      POSTGRES_PASSWORD: ai_bank_password
+    ports: ["5432:5432"]
+    volumes: ["ai_bank_pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ai_bank -d ai_bank"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+volumes:
+  ai_bank_pgdata:
